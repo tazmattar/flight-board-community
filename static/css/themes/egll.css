@@ -1,0 +1,100 @@
+/* =============================================
+   HEATHROW (EGLL) THEME
+   Classic Heathrow Yellow with Black Text
+   ============================================= */
+
+body.theme-egll {
+    --heathrow-yellow: #FDB813;
+    --heathrow-dark: #1a1a1a;
+    --font-ui: 'Inter', sans-serif;
+    --font-data: 'Inter', sans-serif;
+}
+
+body.theme-egll .fids-header {
+    background-color: var(--heathrow-yellow);
+    border-bottom: 4px solid #000000;
+}
+
+body.theme-egll .airport-selector select,
+body.theme-egll .csd-trigger,
+body.theme-egll .clock-container {
+    color: #000000;
+    background: transparent;
+}
+
+body.theme-egll .section-divider {
+    background-color: var(--heathrow-yellow);
+    color: #000000;
+    padding: 12px 20px;
+    border-bottom: 2px solid #000000;
+    font-weight: 700;
+}
+
+body.theme-egll .flight-table th {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-bottom: 2px solid #333;
+    text-transform: none;
+}
+
+body.theme-egll .flight-table td {
+    line-height: 1;
+}
+
+@media (min-height: 1500px), (orientation: portrait) {
+    body.theme-egll {
+        --font-size-cell: 1.2rem;
+    }
+}
+
+body.theme-egll .col-status .flap-container {
+    text-transform: none;
+}
+
+/* Go to Gate: match Boarding green */
+body.theme-egll .col-status[data-status*="GO TO"] .flap-container {
+    background-color: #00b000;
+    color: #ffffff !important;
+}
+
+/* Yellow destination/origin text */
+body.theme-egll .flap-dest {
+    color: var(--heathrow-yellow) !important;
+}
+
+body.theme-egll .fids-footer {
+    background-color: #000000;
+    border-top: 4px solid var(--heathrow-yellow);
+}
+
+body.theme-egll .footer-group .main-label {
+    color: var(--heathrow-yellow);
+    font-weight: 700;
+}
+
+body.theme-egll .footer-group .main-label .en {
+    display: none; /* Hide English subtitle for EGLL */
+}
+
+body.theme-egll .gate-icon-box {
+    border-color: var(--heathrow-yellow);
+    color: var(--heathrow-yellow);
+}
+
+body.theme-egll .huge-arrow {
+    color: var(--heathrow-yellow);
+}
+
+body.theme-egll .security-time .label {
+    color: #cccccc;
+}
+
+body.theme-egll .security-time .time {
+    color: var(--heathrow-yellow);
+}
+
+/* Widget Colors: Force BLACK */
+body [class*="theme-"] .widget-icon, 
+body [class*="theme-"] .widget-text {
+    color: #000000 !important;
+}

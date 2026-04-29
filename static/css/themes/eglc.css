@@ -1,0 +1,117 @@
+/* =============================================
+   CITY (EGLC) THEME
+   London City Airport Blue, White and Grey
+   ============================================= */
+
+body.theme-eglc {
+    --city-blue: #3542C3;
+    --city-grey: #737587;
+    --font-ui: 'Inter', sans-serif;
+    --font-data: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+body.theme-eglc .fids-header {
+    background-color: var(--city-blue);
+    border-bottom: none;
+}
+
+body.theme-eglc .airport-selector select,
+body.theme-eglc .csd-trigger,
+body.theme-eglc .clock-container {
+    color: #ffffff !important;
+    background: transparent;
+}
+
+body.theme-eglc .section-divider {
+    background-color: var(--city-blue);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-bottom: none;
+    font-weight: 700;
+}
+
+body.theme-eglc .flight-table th {
+    background: var(--city-grey);
+    color: #ffffff;
+    border-bottom: none;
+    text-transform: none !important;
+}
+
+body.theme-eglc .split-panel {
+    background: #ffffff;
+    border-color: #dddddd;
+}
+
+body.theme-eglc .flight-table tbody tr {
+    background-color: #ffffff !important;
+    color: #000000;
+}
+
+body.theme-eglc .flight-table tbody tr:nth-child(even) {
+    background-color: #f0f0f0 !important;
+}
+
+body.theme-eglc .flight-table td {
+    color: #000000;
+}
+
+body.theme-eglc .col-status .flap-container {
+    text-transform: none !important;
+    color: #000000;
+}
+
+body.theme-eglc .col-status[data-status="En Route"] .flap-container {
+    color: var(--city-blue) !important;
+}
+
+/* Destination text: blue */
+body.theme-eglc .flap-dest {
+    color: var(--city-blue) !important;
+}
+
+body.theme-eglc .fids-footer {
+    background-color: var(--city-grey);
+    border-top: none;
+}
+
+body.theme-eglc .footer-group .main-label {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+body.theme-eglc .footer-group .main-label .en {
+    display: none;
+}
+
+body.theme-eglc .gate-icon-box {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.theme-eglc .huge-arrow {
+    color: #ffffff;
+}
+
+body.theme-eglc .security-time .label {
+    color: #ffffff;
+}
+
+body.theme-eglc .security-time .time {
+    color: #ffffff;
+}
+
+body.theme-eglc .support-footer-btn {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.theme-eglc .fs-footer-btn {
+    border-color: #ffffff;
+}
+
+/* Widget Colors: Force BLACK */
+body [class*="theme-"] .widget-icon,
+body [class*="theme-"] .widget-text {
+    color: #000000 !important;
+}

@@ -1,0 +1,131 @@
+/* =============================================
+   MANCHESTER (EGCC) THEME
+   Classic Yellow with Black Text
+   ============================================= */
+
+body.theme-egcc {
+    --manchester-yellow: #FDB813;
+    --manchester-dark: #1a1a1a;
+    --font-ui: 'Inter', sans-serif;
+    --font-data: 'Inter', sans-serif;
+}
+
+body.theme-egcc .fids-header {
+    background-color: var(--manchester-yellow);
+    border-bottom: 4px solid #000000;
+}
+
+body.theme-egcc .airport-selector select,
+body.theme-egcc .csd-trigger,
+body.theme-egcc .clock-container {
+    color: #000000;
+    background: transparent;
+}
+
+body.theme-egcc .section-divider {
+    background-color: var(--manchester-yellow);
+    color: #000000;
+    padding: 12px 20px;
+    border-bottom: 2px solid #000000;
+    font-weight: 700;
+    text-transform: none;
+}
+
+body.theme-egcc .flight-table th {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-bottom: 2px solid #333;
+    text-transform: none;
+}
+
+/* Yellow destination/origin text */
+body.theme-egcc .flap-dest {
+    color: var(--manchester-yellow) !important;
+}
+
+body.theme-egcc .fids-footer {
+    background-color: #000000;
+    border-top: 4px solid var(--manchester-yellow);
+}
+
+body.theme-egcc .footer-group .main-label {
+    color: var(--manchester-yellow);
+    font-weight: 700;
+}
+
+body.theme-egcc .footer-group .main-label .en {
+    display: none; /* Hide English subtitle for EGLL */
+}
+
+body.theme-egcc .gate-icon-box {
+    border-color: var(--manchester-yellow);
+    color: var(--manchester-yellow);
+}
+
+body.theme-egcc .huge-arrow {
+    color: var(--manchester-yellow);
+}
+
+body.theme-egcc .security-time .label {
+    color: #cccccc;
+}
+
+body.theme-egcc .security-time .time {
+    color: var(--manchester-yellow);
+}
+
+/* Alternating row shading */
+body.theme-egcc .flight-table tbody tr:nth-child(even) {
+    background-color: #585858;
+}
+
+/* Gate: always yellow */
+body.theme-egcc .col-gate {
+    color: #ffcc00;
+}
+
+/* Status: text colour only, no background */
+body.theme-egcc .col-status .flap-container {
+    background-color: transparent !important;
+    text-transform: none;
+}
+
+body.theme-egcc .col-status[data-status="Boarding"] .flap-container {
+    color: #00e040 !important;
+}
+
+body.theme-egcc .col-status[data-status*="GO TO"] .flap-container {
+    color: #ffffff !important;
+}
+
+body.theme-egcc .col-status[data-status="Check-in"] .flap-container,
+body.theme-egcc .col-status[data-status="Taxiing"] .flap-container,
+body.theme-egcc .col-status[data-status="Wait"] .flap-container,
+body.theme-egcc .col-status[data-status="Landing"] .flap-container,
+body.theme-egcc .col-status[data-status="Landed"] .flap-container,
+body.theme-egcc .col-status[data-status="At Gate"] .flap-container,
+body.theme-egcc .col-status[data-status="Scheduled"] .flap-container {
+    color: #ffcc00 !important;
+}
+
+body.theme-egcc .col-status[data-status="Pushback"] .flap-container,
+body.theme-egcc .col-status[data-status="Departing"] .flap-container,
+body.theme-egcc .col-status[data-status="Approaching"] .flap-container {
+    color: #4d9fff !important;
+}
+
+body.theme-egcc .col-status[data-status*="Delayed"] .flap-container,
+body.theme-egcc .col-status[data-status="Cancelled"] .flap-container,
+body.theme-egcc .col-status[data-status="CLOSED"] .flap-container {
+    color: #ff4444 !important;
+}
+
+body.theme-egcc .col-status[data-status="En Route"] .flap-container {
+    color: #ffffff !important;
+}
+
+/* Widget Colors: Force BLACK */
+body [class*="theme-"] .widget-icon, 
+body [class*="theme-"] .widget-text {
+    color: #000000 !important;
+}
