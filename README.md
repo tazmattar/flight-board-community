@@ -34,6 +34,12 @@ Stand coordinate data for Scandinavian airports is sourced from [VATSIM Scandina
 
 ---
 
+## Why is the core application private?
+
+FlightBoard is integrating with third-party APIs — including Navigraph — whose terms require the implementation to remain closed-source. The community contribution layer (themes and airport registry) remains open so the community can still contribute the parts that matter most for airport coverage and visual quality.
+
+---
+
 ## Licence
 
 Airport themes and registry data in this repository are licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE.md).
