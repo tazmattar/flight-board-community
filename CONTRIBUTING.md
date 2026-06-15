@@ -73,6 +73,17 @@ If you want to contribute stand data for an airport, contact Taz directly via [s
 
 ---
 
+## 4. Airline logos (virtual airlines)
+
+Real-world airline logos are pulled automatically by IATA code. Virtual / VATSIM-specific airlines aren't on any public logo CDN, so adding one requires a logo asset plus a small mapping in the core application — not something this repo's PRs can cover (CSS/JSON only, see above).
+
+If you represent a virtual airline and would like your logo added, email Taz directly at [info@simfixr.com](mailto:info@simfixr.com) with:
+
+- The ICAO callsign prefix(es) your airline uses on VATSIM
+- A transparent PNG logo (square works best)
+
+---
+
 ## Pull request guidelines
 
 - One airport (or small set of related airports) per PR — keeps reviews focused

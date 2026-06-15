@@ -26,6 +26,8 @@ This is not the core application. The FlightBoard engine (Python/Flask backend, 
 
 **Stand data:** stand coordinates are not part of this repo. Contact Taz via [simfixr.com](https://www.simfixr.com) if you want to contribute stand data for a new airport.
 
+**Airline logos (virtual airlines):** logo additions for virtual/VATSIM-specific airlines require a small core-app change and aren't handled via this repo. Email [info@simfixr.com](mailto:info@simfixr.com) with your ICAO callsign prefix(es) and a transparent PNG logo to request yours be added.
+
 ---
 
 ## Stand data attribution
