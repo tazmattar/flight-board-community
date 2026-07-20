@@ -1,32 +1,43 @@
-# FlightBoard Community
+# FlightBoard
 
-This repository is the community contribution layer for **FlightBoard** — a VATSIM flight information display system (FIDS) that shows live departures and arrivals for virtual airports.
+**FlightBoard** is a VATSIM flight information display system (FIDS) showing live departures and arrivals for virtual airports, with a live traffic map, real-world-styled airport boards, and Navigraph-powered route data.
 
 Live application: **[flightboard.simfixr.com](https://flightboard.simfixr.com)**
 
 ---
 
-## What's in this repo
+## Where to get help or report something
 
-This is not the core application. The FlightBoard engine (Python/Flask backend, JavaScript frontend, socket layer) is proprietary. This repository contains only the parts that the community can contribute to:
+**Discord is the fastest route — [join here](https://discord.gg/kVUM9tYTN).** Bug reports, feature requests, questions and airport suggestions all belong there.
 
-| Path | Contents |
-|---|---|
-| `static/css/themes/` | One CSS file per airport — controls colours, fonts, and layout styling |
-| `data/airports.json` | Airport registry — ICAO codes, display names, geofencing ceilings, theme mappings |
-| `docs/` | Contribution guides |
+If you'd rather not use Discord, you can [open an issue](https://github.com/tazmattar/flight-board-community/issues) on this repository instead. Both are read by the same person.
 
 ---
 
-## How to contribute
+## What this repository is
 
-**New airport theme:** create a CSS file in `static/css/themes/` scoped to `body.theme-<icao>` and add the airport entry to `data/airports.json`. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for CSS conventions and [`docs/adding-an-airport.md`](docs/adding-an-airport.md) for the full field reference.
+This is the **public home for FlightBoard's documentation, licensing and user reports**. The application itself — Python/Flask backend, JavaScript frontend, socket layer — is proprietary and lives in a private repository.
 
-**Existing theme improvement:** fork the repo, edit the CSS file, submit a pull request.
+It previously also hosted airport theme CSS and the airport registry for community pull requests. Those were removed once FlightBoard gained a built-in theme builder: themes are now generated from a token-based design system through an admin interface with live preview, so hand-written CSS files are no longer how airport boards get made. The old files remain in this repository's git history.
 
-**Stand data:** stand coordinates are not part of this repo. Contact Taz via [simfixr.com](https://www.simfixr.com) if you want to contribute stand data for a new airport.
+---
 
-**Airline logos (virtual airlines):** logo additions for virtual/VATSIM-specific airlines require a small core-app change and aren't handled via this repo. Email [info@simfixr.com](mailto:info@simfixr.com) with your ICAO callsign prefix(es) and a transparent PNG logo to request yours be added.
+## Why is the core application private?
+
+FlightBoard integrates with third-party APIs — including Navigraph — whose terms require the implementation to remain closed-source.
+
+---
+
+## Contributing
+
+Two kinds of contribution are genuinely useful and still very welcome:
+
+- **Stand data** for an airport — improves gate detection accuracy
+- **Virtual airline logos** — if you run a VA flying on VATSIM
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for what's needed and how to send it.
+
+**Airport suggestions:** you don't need to build anything. Ask on [Discord](https://discord.gg/kVUM9tYTN) and the airport can be added and themed directly.
 
 ---
 
@@ -36,22 +47,16 @@ Stand coordinate data for Scandinavian airports is sourced from [VATSIM Scandina
 
 ---
 
-## Why is the core application private?
-
-FlightBoard is integrating with third-party APIs — including Navigraph — whose terms require the implementation to remain closed-source. The community contribution layer (themes and airport registry) remains open so the community can still contribute the parts that matter most for airport coverage and visual quality.
-
----
-
 ## Licence
 
-Airport themes and registry data in this repository are licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE.md).
+Documentation in this repository is licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](LICENSE.md).
 
-The core FlightBoard application is proprietary software. Copyright © 2026 Taz Mattar / Simfixr.
+The FlightBoard application is proprietary software. Copyright © 2026 Taz Mattar / Simfixr.
 
 ---
 
 ## Contact
 
-- Discord: https://discord.gg/kVUM9tYTN (please submit issues and feature requests here)
+- Discord: **https://discord.gg/kVUM9tYTN** (preferred — issues, feature requests and questions)
 - Website: [simfixr.com](https://www.simfixr.com)
 - Live board: [flightboard.simfixr.com](https://flightboard.simfixr.com)

@@ -1,95 +1,47 @@
 # Contributing to FlightBoard
 
-Thank you for your interest in contributing. This repository contains the community layer of FlightBoard — airport themes and the airport registry. The core application is proprietary and not part of this repo.
-
-There are two ways to contribute:
+Thank you for your interest. FlightBoard's application code is proprietary and lives in a private repository, so this repo doesn't take code pull requests. Everything below is still genuinely useful, and all of it is welcome.
 
 ---
 
-## 1. Adding or improving an airport theme (CSS)
+## 1. Reporting a bug or requesting a feature
 
-Theme files live in `static/css/themes/` — one CSS file per airport, named `<icao_lowercase>.css`.
+**[Discord](https://discord.gg/kVUM9tYTN) is the fastest route**, but a [GitHub issue](https://github.com/tazmattar/flight-board-community/issues) works just as well if you prefer.
 
-**Conventions:**
+What helps most:
 
-- Scope every rule to `body.theme-<icao>` to prevent bleed into other themes:
-  ```css
-  body.theme-omdb .flight-table th { ... }
-  ```
-- Status colours use the `data-status` attribute on `.col-status`:
-  ```css
-  body.theme-omdb .col-status[data-status="Boarding"] { color: #00b050 !important; }
-  body.theme-omdb .col-status[data-status="Departed"]  { color: #888 !important; }
-  ```
-  Text colour only — no background colours on status cells. Use `!important` to beat the global stylesheet.
-- Gate column has class `col-gate` for theme-specific gate cell styling.
-- Do **not** use `!important` on `.widget-icon` colour — it blocks the ATC radar-pulse CSS animation.
-- To suppress uppercase from the global stylesheet, add (with `!important` if needed):
-  ```css
-  body.theme-omdb .flight-table th          { text-transform: none; }
-  body.theme-omdb .col-status .flap-container { text-transform: none; }
-  ```
-- Use `eglc.css` or `egcc.css` as simple reference themes. `eddf.css` is a more advanced example with custom animations.
+- The **airport** (ICAO code) and whether you were on the board or the live map
+- The **callsign** involved, if it's about a specific flight
+- What you expected versus what you saw
+- A screenshot — especially for anything visual
+- Roughly **when** it happened, so it can be matched against the VATSIM feed
 
-**Steps:**
-1. Fork this repo
-2. Create `static/css/themes/<icao>.css`
-3. Add or update the airport entry in `data/airports.json` (see below)
-4. Submit a pull request
+Small details matter more than polish. "EGLL arrivals showed WAIT for 20 minutes after landing at about 19:30Z" is a great report.
 
 ---
 
-## 2. Adding an airport to the registry (`data/airports.json`)
+## 2. Airport suggestions
 
-See `docs/adding-an-airport.md` for the full field reference and examples.
-
-**Required fields for a PR:**
-
-```json
-"ICAO": {
-  "name": "Airport Name",
-  "selector_label": "Full Display Name in Dropdown",
-  "ceiling": 6000,
-  "has_stands": false,
-  "theme_css": "/static/css/themes/icao.css",
-  "theme_class": "theme-icao",
-  "title_case": false,
-  "flags": null,
-  "footer_country": null,
-  "group": "Western Europe"
-}
-```
-
-- Set `"has_stands": false` — stand data contributions are handled separately (see below).
-- `group` should be one of: `"United Kingdom"`, `"Scandinavia"`, `"Western Europe"`, `"North America"`, `"Middle East"`, `"Asia Pacific"`, or `null`.
+You don't need to build anything. Ask on [Discord](https://discord.gg/kVUM9tYTN) or open an issue naming the airport, and it can be added and themed directly — airport boards are now built with FlightBoard's built-in theme builder rather than hand-written CSS.
 
 ---
 
-## 3. Stand data contributions
+## 3. Stand data
 
-Stand coordinate data is not part of this repository. Stand positions require careful manual verification against satellite imagery — even small errors break gate detection (the geofencing radius is 35 m).
+Stand coordinates drive gate detection, and accuracy matters: the geofencing radius is 35 m, so even small errors put aircraft on the wrong stand. Positions need careful manual verification against satellite imagery.
 
-If you want to contribute stand data for an airport, contact Taz directly via [simfixr.com](https://www.simfixr.com).
+If you'd like to contribute stand data for an airport, get in touch on [Discord](https://discord.gg/kVUM9tYTN) or via [simfixr.com](https://www.simfixr.com) before starting, so the format and the airport's current status can be confirmed.
 
 ---
 
-## 4. Airline logos (virtual airlines)
+## 4. Virtual airline logos
 
-Real-world airline logos are pulled automatically by IATA code. Virtual / VATSIM-specific airlines aren't on any public logo CDN, so adding one requires a logo asset plus a small mapping in the core application — not something this repo's PRs can cover (CSS/JSON only, see above).
+Real-world airline logos are pulled automatically by IATA code. Virtual and VATSIM-specific airlines aren't on any public logo CDN, so adding one needs a logo asset plus a small mapping in the application.
 
-If you represent a virtual airline and would like your logo added, email Taz directly at [info@simfixr.com](mailto:info@simfixr.com) with:
+If you represent a virtual airline and would like your logo on the boards, email [info@simfixr.com](mailto:info@simfixr.com) with:
 
 - The ICAO callsign prefix(es) your airline uses on VATSIM
 - A transparent PNG logo (square works best)
-
----
-
-## Pull request guidelines
-
-- One airport (or small set of related airports) per PR — keeps reviews focused
-- CSS only — do not include changes to Python, JavaScript, HTML templates, or any file not listed in the repo
-- Test your colour choices against the live board at [flightboard.simfixr.com](https://flightboard.simfixr.com) if possible
-- Verify the ICAO code against the official ICAO airport designators list
 
 ---
 
