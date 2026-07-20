@@ -52,5 +52,6 @@ The core FlightBoard application is proprietary software. Copyright © 2026 Taz 
 
 ## Contact
 
+- Discord: https://discord.gg/kVUM9tYTN (please submit issues and feature requests here)
 - Website: [simfixr.com](https://www.simfixr.com)
 - Live board: [flightboard.simfixr.com](https://flightboard.simfixr.com)
